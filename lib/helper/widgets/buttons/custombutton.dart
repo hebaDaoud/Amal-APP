@@ -15,9 +15,8 @@ class CustomBotton extends StatelessWidget {
       minWidth: MediaQuery.of(context).size.width - 48,
       color: AppColor.primaryColor,
       textColor: Colors.white,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-      child: Text(text,
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: Text(text, style: const TextStyle(fontSize: 15)),
     );
   }
 }

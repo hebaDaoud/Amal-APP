@@ -4,6 +4,7 @@ class AppRoute {
   static const String onboarding3 = "/onboarding3";
   static const String login = "/login";
   static const String otp = "/otp";
+  static const String accountType = "/accountType";
   static const String signup = "/signup";
   static const String homeDon = "/homeDon";
   static const String addLocation = "/addLocation";

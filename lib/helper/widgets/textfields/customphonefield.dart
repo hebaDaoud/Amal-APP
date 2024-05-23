@@ -14,45 +14,39 @@ class CustomPhoneField extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            flex: 5,
-            child: Container(
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(4)),
-                color: AppColor.gray,
-              ),
-              height: 52,
-              child: TextFormField(
-                controller: mycontroller,
-                validator: valid,
-                textAlign: TextAlign.left,
-                keyboardType: TextInputType.phone,
-                decoration: const InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(horizontal: 12),
-                    hintText: "5XXXXXXXXX",
-                    hintStyle: TextStyle(fontSize: 16),
-                    border: InputBorder.none),
-              ),
-            ),
-          ),
-          const SizedBox(width: 16),
-          Expanded(
             flex: 2,
             child: Container(
               decoration: const BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(4)),
+                borderRadius: BorderRadius.all(Radius.circular(12)),
                 color: AppColor.gray,
               ),
-              height: 52,
+              height: 60,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  const SizedBox(width: 12),
                   const Text(
-                    "966",
+                    "+966",
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.black54),
                   ),
                   const SizedBox(width: 8),
                   SvgPicture.asset("assets/images/SA_flag.svg"),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    flex: 5,
+                    child: TextFormField(
+                      controller: mycontroller,
+                      validator: valid,
+                      textAlign: TextAlign.left,
+                      keyboardType: TextInputType.phone,
+                      decoration: const InputDecoration(
+                          contentPadding: EdgeInsets.symmetric(horizontal: 12),
+                          hintText: "5XXXXXXXXX",
+                          hintStyle: TextStyle(fontSize: 16),
+                          border: InputBorder.none),
+                    ),
+                  ),
                 ],
               ),
             ),
